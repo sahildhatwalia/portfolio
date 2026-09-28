@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-color: #0b1326;
+    --text-color: #dae2fd;
+    --surface: #171f33;
+    --surface-high: #222a3d;
+    --surface-lowest: #060e20;
+    --border-color: #000000;
+  }
+
+  html.light {
+    --bg-color: #f7f9fd;
+    --text-color: #0f172a;
+    --surface: #ffffff;
+    --surface-high: #edf2f7;
+    --surface-lowest: #e2e8f0;
+    --border-color: #000000;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+.font-display {
+  font-family: 'Fredoka', 'Space Grotesk', sans-serif;
+}
+.font-heading {
+  font-family: 'Space Grotesk', sans-serif;
+}
+.font-body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.neo-border {
+  border: 2.5px solid #000000;
+}
+
+.neo-border-thin {
+  border: 1.5px solid #000000;
+}
+
+.shadow-pop {
+  box-shadow: 4px 4px 0px #000000;
+}
+.shadow-pop-sm {
+  box-shadow: 2.5px 2.5px 0px #000000;
+}
+.shadow-pop-emerald {
+  box-shadow: 5px 5px 0px #10b981;
+}
+.shadow-pop-cyan {
+  box-shadow: 5px 5px 0px #38bdf8;
+}
+.shadow-pop-yellow {
+  box-shadow: 5px 5px 0px #facc15;
+}
+.shadow-pop-purple {
+  box-shadow: 5px 5px 0px #c084fc;
+}
+.shadow-pop-pink {
+  box-shadow: 5px 5px 0px #f472b6;
+}
+.shadow-pop-lg {
+  box-shadow: 7px 7px 0px #000000;
+}
+
+.grid-bg-dark {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+.grid-bg-light {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 26s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes floatDelayed {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+.animate-float-slow {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatDelayed 5s ease-in-out 1.5s infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 2.5s ease-in-out infinite;
+}
