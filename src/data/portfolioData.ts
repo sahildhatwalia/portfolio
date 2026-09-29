@@ -1,5 +1,5 @@
 import { Project, SkillCategory, Experience, Certification } from '../types/portfolio';
-
+// about me
 export const PERSONAL_INFO = {
   name: 'Sahil Dhatwalia',
   title: 'MERN Stack Developer | Generative AI Enthusiast',
