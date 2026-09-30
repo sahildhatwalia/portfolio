@@ -5,7 +5,7 @@ import { PERSONAL_INFO } from '../data/portfolioData';
 interface ContactSectionProps {
   isDark: boolean;
 }
-
+// if anybody want to connect they can contact me through various options
 export const ContactSection: React.FC<ContactSectionProps> = ({ isDark }) => {
   const [copiedField, setCopiedField] = useState<'email' | 'phone' | null>(null);
   const [name, setName] = useState('');
